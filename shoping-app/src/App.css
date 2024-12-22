@@ -1,0 +1,207 @@
+/* Výchozí styly pro světlý režim */
+body.light {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Styly pro tmavý režim */
+body.dark {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #121212;
+}
+
+/* Nastavení výchozí bílé barvy */
+body.dark * {
+  color: #000000; /* Výchozí text je bílý */
+}
+
+/* Text, který musí zůstat černý */
+body.dark .item-name {
+  color: #000000 !important; /* Černý text položek */
+}
+
+/* Tlačítko pro přepínání režimu */
+body.dark .theme-toggle {
+  color: #ffffff !important; /* Bílý text tlačítka */
+  border-color: #ffffff; /* Viditelné okraje tlačítka */
+  background-color: transparent; /* Transparentní pozadí */
+}
+
+/* Speciální pravidla pro neaktivní tlačítka */
+button[disabled] {
+  color: #cccccc !important; /* Šedý text pro neaktivní tlačítka */
+  border-color: #cccccc;
+  background-color: transparent; /* Transparentní pozadí */
+  cursor: not-allowed;
+}
+
+.container {
+  width: 400px;
+  background-color: inherit;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Responzivní styly */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .theme-toggle {
+    margin-top: 10px;
+  }
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+header .icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: inherit;
+}
+
+input[type="text"] {
+  width: calc(100% - 40px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.add-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000000; /* Pevná černá barva */
+  position: relative;
+  top: 2px;
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  margin-bottom: 6px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+}
+
+.item-name {
+  font-size: 16px;
+  flex-grow: 1;
+  margin-right: 8px;
+  color: #000000 !important; /* Vždy černá barva */
+}
+
+.item-completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 18px;
+}
+
+.user-switcher {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-title {
+  font-size: 1.2rem;
+  color: white;
+  margin: 0;
+}
+
+.user-dropdown {
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid currentColor;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: inherit;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark .item-name {
+  color: #000000 !important; /* Vždy černá barva i v dark modu */
+}
+
+body.light .item-name {
+  color: #000000; /* Pevná černá barva i ve světlém módu */
+}
+
+.language-switcher button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+}
+
+.language-switcher button:hover {
+  background-color: #ddd;
+}
